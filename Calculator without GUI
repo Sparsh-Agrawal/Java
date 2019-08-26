@@ -1,0 +1,79 @@
+import java.util.Scanner;
+
+class Calculator
+{
+	public static void main(String[] agrs)
+	{
+		int a;
+		do
+		{
+			Calculator k=new Calculator();
+			k.displayMenu();
+			Scanner sc=new Scanner(System.in);
+			a=sc.nextInt();
+			if(a==0)
+			{
+				System.out.println("Thank You");
+				System.exit(0);
+			}
+			System.out.println("Enter First Number :-");
+			int b=sc.nextInt();
+			System.out.println("Enter Second Number :-");
+			int c=sc.nextInt();
+			switch(a)
+			{
+				case 1 : k.add(b,c);
+				break;
+				case 2 : k.sub(b,c);
+				break;
+				case 3 : k.mul(b,c);
+				break;
+				case 4 : k.div(b,c);
+				break;
+				case 5 : k.rem(b,c);
+				break;
+			}
+
+
+		}while(a!=0);
+	}
+
+	void displayMenu()
+	{
+		System.out.println("Press 1 to Add");
+		System.out.println("Press 2 to Subtract");
+		System.out.println("Press 3 to Multiply");
+		System.out.println("Press 4 to Division");
+		System.out.println("Press 5 to get Remainder");
+		System.out.println("Press 0 to Exit");
+	}
+	void add(int a,int b)
+	{
+		int add=a+b;
+		System.out.println("Addition is "+add);
+	}
+
+	void sub(int a,int b)
+	{
+		int sub=a-b;
+		System.out.println("Subtraction is "+sub);
+	}
+
+	void mul(int a,int b)
+	{
+		int mul=a*b;
+		System.out.println("Multiplicaion is "+mul);
+	}
+
+	void div(int a,int b)
+	{
+		int div=a/b;
+		System.out.println("Division is "+div);
+	}
+
+	void rem(int a,int b)
+	{
+		int rem=a%b;
+		System.out.println("Remainder is "+rem);
+	}
+}
