@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Solution
+{
+
+    public static void main(String[] args) 
+    {
+        Scanner scan=new Scanner(System.in);
+        int a=1;
+        boolean next;
+        do
+        {
+            next=scan.hasNext();
+            if(next)
+            {
+                String s=scan.nextLine();
+                //String a=scan.nextLine();
+                System.out.println(a+" "+s);
+                a++;
+            }
+        }while(next);    
+    }
+}
+
